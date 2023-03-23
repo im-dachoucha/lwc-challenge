@@ -103,7 +103,7 @@ public class PokeCallout {
             
             if(types != null && types.size() > 0){
                 String type = (String) (((Map<String, Object>) ((Map<String, Object>)types[0]).get('type')).get('name'));
-                System.debug(type);
+                // System.debug(type);
                 pokemonRecord.put('Type_1__c', type);
                 // System.debug( ((Map<String, Object>) ((Map<String, Object>)types[0]).get('type')).get('name') );
             }
