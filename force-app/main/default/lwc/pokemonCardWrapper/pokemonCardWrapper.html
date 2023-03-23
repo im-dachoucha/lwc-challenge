@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Pokemon List">
+      <div class="slds-m-around_medium">
+        <lightning-input
+          label="Search"
+          onchange={handleSearchChange}
+          value={searchTerm}
+        ></lightning-input>
+      </div>
+  
+      <div class="slds-m-around_medium">
+        <template for:each={filteredPokemon} for:item="pokemon">
+          <c-pokemon-info-card
+            key={pokemon.Id}
+            pokemon={pokemon}
+            onpokemonselect={handlePokemonSelect}
+          ></c-pokemon-info-card>
+        </template>
+      </div>
+  
+      <c-pokemon-detail-modal
+        pokemon={selectedPokemon}
+        is-modal-open={isModalOpen}
+        onclosemodal={handleModalClose}
+      ></c-pokemon-detail-modal>
+    </lightning-card>
+  </template>

@@ -1,0 +1,29 @@
+<template>
+    <template if:true={pokemon}>
+        <div class="slds-modal slds-fade-in-open" tabindex="-1" role="dialog">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 class="slds-text-heading_medium">{pokemon.Name}</h2>
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleClose}>
+                        <lightning-icon icon-name="utility:close" alternative-text="Close" size="small"></lightning-icon>
+                    </button>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <img src={pokemon.Image__c} alt={pokemon.Name} width="150" height="150" />
+                    <p>Height: {pokemon.Height__c}</p>
+                    <p>Weight: {pokemon.Weight__c}</p>
+                    <p>Attack: {pokemon.Attack__c}</p>
+                    <p>Defense: {pokemon.Defense__c}</p>
+                    <p>Speed: {pokemon.Speed__c}</p>
+                    <p>Abilities: {pokemon.Abilities__c}</p>
+                    <p>Type: {pokemon.Type_1__c}</p>
+                    <p>Pokedex Number: {pokemon.Pokedex_Number__c}</p>
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={handleClose}>Close</button>
+                </footer>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

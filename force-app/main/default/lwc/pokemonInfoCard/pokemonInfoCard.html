@@ -1,0 +1,44 @@
+<template>
+    <div class="pokemon-card" onclick={handleCardClick}>
+        <div class="pokemon-card-header">
+            <div class="pokemon-card-title">
+                <h3>{pokemon.Name}</h3>
+                <p>{pokemon.Pokedex_Number__c}</p>
+            </div>
+            <div class="pokemon-card-type">
+                <p>{pokemon.Type_1__c}</p>
+            </div>
+        </div>
+        <div class="pokemon-card-body">
+            <div class="pokemon-card-image">
+                <img src={pokemon.Image__c} alt={pokemon.Name} />
+            </div>
+            <div class="pokemon-card-stats">
+                <div class="pokemon-card-ability">
+                    <h4>Ability:</h4>
+                    <p>{pokemon.Abilities__c}</p>
+                </div>
+                <div class="pokemon-card-attack">
+                    <h4>Attack:</h4>
+                    <p>{pokemon.Attack__c}</p>
+                </div>
+                <div class="pokemon-card-defense">
+                    <h4>Defense:</h4>
+                    <p>{pokemon.Defense__c}</p>
+                </div>
+                <div class="pokemon-card-speed">
+                    <h4>Speed:</h4>
+                    <p>{pokemon.Speed__c}</p>
+                </div>
+                <div class="pokemon-card-height">
+                    <h4>Height:</h4>
+                    <p>{pokemon.Height__c}</p>
+                </div>
+                <div class="pokemon-card-weight">
+                    <h4>Weight:</h4>
+                    <p>{pokemon.Weight__c}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
